@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSMQLoggingPOC", "MSMQLoggingPOC.csproj", "{3EE43353-88EE-4A77-9F8D-5BE159F86CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWatcher", "..\QueueWatcher\QueueWatcher.csproj", "{25772DFD-559C-49DE-B4BB-EB0467F4A016}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NR.QueueWatcher.UI", "..\QueueWatcher\NR.QueueWatcher.UI.csproj", "{25772DFD-559C-49DE-B4BB-EB0467F4A016}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{10150CAB-FDA1-44F1-847C-39CE6D74AFCA}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{10150C
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NR.QueueWatcher", "NR.QueueWatcher\NR.QueueWatcher.csproj", "{415614D1-1FD8-4B37-9DFA-82A40624CB5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{25772DFD-559C-49DE-B4BB-EB0467F4A016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25772DFD-559C-49DE-B4BB-EB0467F4A016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25772DFD-559C-49DE-B4BB-EB0467F4A016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415614D1-1FD8-4B37-9DFA-82A40624CB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415614D1-1FD8-4B37-9DFA-82A40624CB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415614D1-1FD8-4B37-9DFA-82A40624CB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415614D1-1FD8-4B37-9DFA-82A40624CB5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

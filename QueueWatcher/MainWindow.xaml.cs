@@ -1,28 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace QueueWatcher
+namespace NR.QueueWatcher.UI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<LogEntry> LogEntries;
+ 
         public MainWindow()
         {
             InitializeComponent();
+
+            LogEntries = new ObservableCollection<LogEntry>();
+            FetchMessages();
+            MessageGrid.ItemsSource = LogEntries;
+        }
+
+        private void FetchMessages_OnClick(object sender, RoutedEventArgs e)
+        {
+            FetchMessages();
+        }
+
+        private void FetchMessages()
+        {
+            var watcher = new QueueWatcher();
+            var entries = watcher.GetLogEntries();
+            LogEntries.Clear();
+
+            foreach (var entry in entries)
+            {
+                LogEntries.Add(entry);
+            }
         }
     }
 }

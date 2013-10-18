@@ -7,8 +7,8 @@
     <ProjectGuid>{25772DFD-559C-49DE-B4BB-EB0467F4A016}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QueueWatcher</RootNamespace>
-    <AssemblyName>QueueWatcher</AssemblyName>
+    <RootNamespace>NR.QueueWatcher.UI</RootNamespace>
+    <AssemblyName>NR.QueueWatcher.UI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -92,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSMQLoggingPOC\NR.QueueWatcher\NR.QueueWatcher.csproj">
+      <Project>{415614D1-1FD8-4B37-9DFA-82A40624CB5A}</Project>
+      <Name>NR.QueueWatcher</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
