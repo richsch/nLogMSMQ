@@ -1,13 +1,23 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="NR.QueueWatcher.UI.MainWindow"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase" xmlns:src="clr-namespace:NR.QueueWatcher.UI"  mc:Ignorable="d" x:Class="NR.QueueWatcher.UI.MainWindow"
         Title="MainWindow" Height="350" Width="525">
-
+    <Window.Resources>
+        <CollectionViewSource x:Key="src" x:Name="collectionView">
+        </CollectionViewSource>
+    </Window.Resources>
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar>
                 <Button Name="btnFetchMessages" Click="FetchMessages_OnClick" Content="Fetch" />
+            </ToolBar>
+            <ToolBar>
+                <Label>Application</Label>
+                <ComboBox Name="cmbAppFilter" VerticalAlignment="Center" Width="Auto" MinWidth="120" IsReadOnly="True"/>
+                <Label>Log level</Label>
+                <ComboBox Name="cmbLevelFilter" VerticalAlignment="Center" Width="Auto" MinWidth="120" IsReadOnly="True"/>
             </ToolBar>
         </ToolBarTray>
         <DataGrid Name="MessageGrid" VerticalAlignment="Stretch" AutoGenerateColumns="False" DockPanel.Dock="Top">
