@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Messaging;
 
-namespace NR.QueueWatcher
+namespace NR.QueueWatcher.UI
 {
     public class QueueWatcher
     {

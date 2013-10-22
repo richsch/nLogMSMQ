@@ -66,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="NR.QueueWatcher\NR.QueueWatcher.csproj">
-      <Project>{415614D1-1FD8-4B37-9DFA-82A40624CB5A}</Project>
-      <Name>NR.QueueWatcher</Name>
+    <ProjectReference Include="..\QueueWatcher\NR.QueueWatcher.UI.csproj">
+      <Project>{25772DFD-559C-49DE-B4BB-EB0467F4A016}</Project>
+      <Name>NR.QueueWatcher.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
